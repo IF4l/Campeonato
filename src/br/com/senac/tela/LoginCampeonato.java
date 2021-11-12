@@ -1,10 +1,10 @@
-
-package campeonato;
+package br.com.senac.tela;
 
 import java.awt.Color;
 import java.awt.Point;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -40,7 +40,7 @@ public class LoginCampeonato extends javax.swing.JFrame {
         lbTexto = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         lbLoginEmail = new javax.swing.JLabel();
-        loginButton = new javax.swing.JButton();
+        acessarButton = new javax.swing.JButton();
         exitButoon = new javax.swing.JButton();
         javax.swing.JTextField textEmail = new javax.swing.JTextField();
         jPasswordField1 = new javax.swing.JPasswordField();
@@ -114,24 +114,24 @@ public class LoginCampeonato extends javax.swing.JFrame {
         lbLoginEmail.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbLoginEmail.setText("Entre com seu E-mail");
 
-        loginButton.setBackground(new java.awt.Color(58, 65, 84));
-        loginButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        loginButton.setForeground(new java.awt.Color(255, 255, 255));
-        loginButton.setText("Entrar");
-        loginButton.setBorderPainted(false);
-        loginButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        loginButton.setFocusPainted(false);
-        loginButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        acessarButton.setBackground(new java.awt.Color(58, 65, 84));
+        acessarButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        acessarButton.setForeground(new java.awt.Color(255, 255, 255));
+        acessarButton.setText("Acessar");
+        acessarButton.setBorderPainted(false);
+        acessarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        acessarButton.setFocusPainted(false);
+        acessarButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                loginButtonMouseEntered(evt);
+                acessarButtonMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                loginButtonMouseExited(evt);
+                acessarButtonMouseExited(evt);
             }
         });
-        loginButton.addActionListener(new java.awt.event.ActionListener() {
+        acessarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginButtonActionPerformed(evt);
+                acessarButtonActionPerformed(evt);
             }
         });
 
@@ -184,7 +184,7 @@ public class LoginCampeonato extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(textEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
                     .addComponent(exitButoon, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
-                    .addComponent(loginButton, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
+                    .addComponent(acessarButton, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
                     .addComponent(jPasswordField1))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -198,7 +198,7 @@ public class LoginCampeonato extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(76, 76, 76)
-                .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(acessarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(exitButoon, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(46, Short.MAX_VALUE))
@@ -239,23 +239,31 @@ public class LoginCampeonato extends javax.swing.JFrame {
 // TODO add your handling code here
     }//GEN-LAST:event_exitButoonMouseEntered
 
-    private void loginButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButtonMouseEntered
-        loginButton.setBackground(new Color(235, 235, 235));
-        loginButton.setForeground(new Color(58, 65, 84));
+    private void acessarButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_acessarButtonMouseEntered
+        acessarButton.setBackground(new Color(235, 235, 235));
+        acessarButton.setForeground(new Color(58, 65, 84));
 
-    }//GEN-LAST:event_loginButtonMouseEntered
+    }//GEN-LAST:event_acessarButtonMouseEntered
 
     private void exitButoonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitButoonMouseExited
         exitButoon.setBackground(new Color(217, 81, 51));
         exitButoon.setForeground(Color.WHITE);
     }//GEN-LAST:event_exitButoonMouseExited
 
-    private void loginButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButtonMouseExited
-        loginButton.setBackground(new Color(58, 65, 84));
-        loginButton.setForeground(Color.WHITE);
-    }//GEN-LAST:event_loginButtonMouseExited
+    private void acessarButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_acessarButtonMouseExited
+        acessarButton.setBackground(new Color(58, 65, 84));
+        acessarButton.setForeground(Color.WHITE);
+    }//GEN-LAST:event_acessarButtonMouseExited
 
-    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
+    private void acessarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acessarButtonActionPerformed
+        if (acessarButton.getText().equals("usuario") && acessarButton.getText().equals("1234")) {
+            JOptionPane.showMessageDialog(null, "Bem vindo");
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Acesso negado");
+
+        }
+
         Point p = this.getLocation();
         LoginCampeonato loginCampeonato = this;
 
@@ -277,7 +285,7 @@ public class LoginCampeonato extends javax.swing.JFrame {
             }
         }.start();
 
-    }//GEN-LAST:event_loginButtonActionPerformed
+    }//GEN-LAST:event_acessarButtonActionPerformed
 
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
 
@@ -298,8 +306,7 @@ public class LoginCampeonato extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     public static void main(String args[]) {
-      
-       
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new LoginCampeonato().setVisible(true);
@@ -308,6 +315,7 @@ public class LoginCampeonato extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton acessarButton;
     private javax.swing.JButton exitButoon;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JMenu jMenu1;
@@ -320,6 +328,5 @@ public class LoginCampeonato extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lbLoginEmail;
     private javax.swing.JLabel lbTexto;
-    private javax.swing.JButton loginButton;
     // End of variables declaration//GEN-END:variables
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package campeonato;
+package br.com.senac.tela;
 
 /**
  *
@@ -79,7 +79,7 @@ public class principal extends javax.swing.JFrame {
 
         jMenuBar1.add(menu);
 
-        jMenu2.setText("premiação");
+        jMenu2.setText("Premiação");
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);

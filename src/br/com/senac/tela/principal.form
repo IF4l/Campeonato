@@ -35,7 +35,7 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="premia&#xe7;&#xe3;o"/>
+            <Property name="text" type="java.lang.String" value="Premia&#xe7;&#xe3;o"/>
           </Properties>
         </Menu>
       </SubComponents>
