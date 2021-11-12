@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package campeonato;
+package br.com.senac.tela;
 
 import br.com.senac.dao.JogadorDaoImpl;
 import br.com.senac.entidade.Jogador;
