@@ -13,18 +13,14 @@ import java.awt.Point;
  * @author amanda.nazario
  */
 public class MenuCampeonato extends javax.swing.JFrame {
-    
-    
+
     private Point point = new Point();
-    
+
     public MenuCampeonato() {
-        
-        
-        
+
         initComponents();
     }
 
-  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -42,6 +38,7 @@ public class MenuCampeonato extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jp2 = new javax.swing.JPanel();
         Text1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jp3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jp4 = new javax.swing.JPanel();
@@ -71,8 +68,9 @@ public class MenuCampeonato extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(12, 90, 168));
+        jPanel1.setBackground(new java.awt.Color(255, 51, 0));
 
+        tabCadastro.setBackground(new java.awt.Color(204, 204, 204));
         tabCadastro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(240, 240, 240), 3, true));
         tabCadastro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -80,7 +78,7 @@ public class MenuCampeonato extends javax.swing.JFrame {
             }
         });
 
-        varCadastro.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        varCadastro.setFont(new java.awt.Font("Book Antiqua", 1, 18)); // NOI18N
         varCadastro.setForeground(new java.awt.Color(0, 0, 24));
         varCadastro.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         varCadastro.setText("Cadastro");
@@ -100,6 +98,7 @@ public class MenuCampeonato extends javax.swing.JFrame {
             .addComponent(varCadastro, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
         );
 
+        tabPremiacoes.setBackground(new java.awt.Color(204, 204, 204));
         tabPremiacoes.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(240, 240, 240), 3, true));
         tabPremiacoes.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -107,7 +106,7 @@ public class MenuCampeonato extends javax.swing.JFrame {
             }
         });
 
-        varPremiações.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        varPremiações.setFont(new java.awt.Font("Book Antiqua", 1, 18)); // NOI18N
         varPremiações.setForeground(new java.awt.Color(0, 0, 24));
         varPremiações.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         varPremiações.setText("Premiações");
@@ -127,6 +126,7 @@ public class MenuCampeonato extends javax.swing.JFrame {
             .addComponent(varPremiações, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
         );
 
+        tabLogin.setBackground(new java.awt.Color(204, 204, 204));
         tabLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(240, 240, 240), 3, true));
         tabLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         tabLogin.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -135,7 +135,7 @@ public class MenuCampeonato extends javax.swing.JFrame {
             }
         });
 
-        varLogin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        varLogin.setFont(new java.awt.Font("Book Antiqua", 1, 18)); // NOI18N
         varLogin.setForeground(new java.awt.Color(0, 0, 24));
         varLogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         varLogin.setText("Login");
@@ -197,25 +197,34 @@ public class MenuCampeonato extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(241, 215, 182));
         jPanel2.setLayout(new javax.swing.OverlayLayout(jPanel2));
 
-        Text1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jp2.setBackground(new java.awt.Color(255, 255, 255));
+
+        Text1.setFont(new java.awt.Font("Book Antiqua", 1, 36)); // NOI18N
         Text1.setForeground(new java.awt.Color(0, 0, 23));
         Text1.setText("Campeonato de Boliche 2021!");
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/campeonato/icons/boliche.png"))); // NOI18N
+        jLabel2.setText("jLabel1");
 
         javax.swing.GroupLayout jp2Layout = new javax.swing.GroupLayout(jp2);
         jp2.setLayout(jp2Layout);
         jp2Layout.setHorizontalGroup(
             jp2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp2Layout.createSequentialGroup()
-                .addGap(162, 162, 162)
-                .addComponent(Text1, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(188, Short.MAX_VALUE))
+                .addGap(35, 35, 35)
+                .addGroup(jp2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Text1)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jp2Layout.setVerticalGroup(
             jp2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(33, 33, 33)
                 .addComponent(Text1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(490, Short.MAX_VALUE))
+                .addGap(40, 40, 40)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(70, Short.MAX_VALUE))
         );
 
         jPanel2.add(jp2);
@@ -230,14 +239,14 @@ public class MenuCampeonato extends javax.swing.JFrame {
             .addGroup(jp3Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(460, Short.MAX_VALUE))
+                .addContainerGap(345, Short.MAX_VALUE))
         );
         jp3Layout.setVerticalGroup(
             jp3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp3Layout.createSequentialGroup()
                 .addGap(84, 84, 84)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(465, Short.MAX_VALUE))
+                .addContainerGap(426, Short.MAX_VALUE))
         );
 
         jPanel2.add(jp3);
@@ -246,11 +255,11 @@ public class MenuCampeonato extends javax.swing.JFrame {
         jp4.setLayout(jp4Layout);
         jp4Layout.setHorizontalGroup(
             jp4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 684, Short.MAX_VALUE)
+            .addGap(0, 569, Short.MAX_VALUE)
         );
         jp4Layout.setVerticalGroup(
             jp4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 610, Short.MAX_VALUE)
+            .addGap(0, 571, Short.MAX_VALUE)
         );
 
         jPanel2.add(jp4);
@@ -259,11 +268,11 @@ public class MenuCampeonato extends javax.swing.JFrame {
         jp5.setLayout(jp5Layout);
         jp5Layout.setHorizontalGroup(
             jp5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 684, Short.MAX_VALUE)
+            .addGap(0, 569, Short.MAX_VALUE)
         );
         jp5Layout.setVerticalGroup(
             jp5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 610, Short.MAX_VALUE)
+            .addGap(0, 571, Short.MAX_VALUE)
         );
 
         jPanel2.add(jp5);
@@ -284,6 +293,7 @@ public class MenuCampeonato extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void tabCadastroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabCadastroMouseClicked
@@ -294,7 +304,7 @@ public class MenuCampeonato extends javax.swing.JFrame {
 //        tabCadastro.setBackground(new Color(240, 240, 240));
 //        tabPremiacoes.setBackground(new Color(240, 240, 240));
 //        tabLogin.setBackground(new Color(240, 240, 240));
-
+        new CadastroJogador().setVisible(true);
     }//GEN-LAST:event_tabCadastroMouseClicked
 
     private void tabPremiacoesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabPremiacoesMouseClicked
@@ -315,7 +325,7 @@ public class MenuCampeonato extends javax.swing.JFrame {
 //        tabCadastro.setBackground(new Color(240, 240, 240));
 //        tabPremiacoes.setBackground(new Color(240, 240, 240));
 //        tabLogin.setBackground(new Color(240, 240, 240));
-
+        new LoginCampeonato().setVisible(true);
     }//GEN-LAST:event_tabLoginMouseClicked
 
     /**
@@ -356,6 +366,7 @@ public class MenuCampeonato extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Text1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

@@ -147,7 +147,7 @@ public class CadastroJogador extends javax.swing.JFrame {
                 .addComponent(btsalvar)
                 .addGap(18, 18, 18)
                 .addComponent(btLimpar)
-                .addContainerGap(101, Short.MAX_VALUE))
+                .addContainerGap(292, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
