@@ -8,8 +8,7 @@ package br.com.senac.tela;
 import br.com.senac.dao.JogadorDaoImpl;
 import br.com.senac.entidade.Jogador;
 import java.text.ParseException;
-import java.time.ZoneOffset;
-import java.time.format.DateTimeFormatter;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JOptionPane;
 
@@ -37,7 +36,6 @@ public class CadastroJogador extends javax.swing.JFrame {
 
         jComboBox1 = new javax.swing.JComboBox();
         jTextField1 = new javax.swing.JTextField();
-        titulo = new javax.swing.JLabel();
         nome = new javax.swing.JLabel();
         varNome = new javax.swing.JTextField();
         nascimento = new javax.swing.JLabel();
@@ -52,17 +50,14 @@ public class CadastroJogador extends javax.swing.JFrame {
         varFederacao = new javax.swing.JTextField();
         btsalvar = new javax.swing.JButton();
         btLimpar = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        titulo = new javax.swing.JLabel();
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jTextField1.setText("jTextField1");
 
         setTitle("cadastro jogador");
-
-        titulo.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
-        titulo.setForeground(new java.awt.Color(255, 51, 51));
-        titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titulo.setText("Cadastro Jogador ");
 
         nome.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         nome.setText("Nome:");
@@ -115,15 +110,43 @@ public class CadastroJogador extends javax.swing.JFrame {
             }
         });
 
+        jPanel1.setBackground(new java.awt.Color(255, 51, 0));
+
+        titulo.setBackground(new java.awt.Color(255, 51, 0));
+        titulo.setFont(new java.awt.Font("Book Antiqua", 1, 36)); // NOI18N
+        titulo.setForeground(new java.awt.Color(255, 255, 255));
+        titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titulo.setText("Cadastro Jogador ");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(titulo)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(titulo)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(titulo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(nascimento)
                             .addComponent(nome)
@@ -139,21 +162,21 @@ public class CadastroJogador extends javax.swing.JFrame {
                                 .addComponent(varTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(varNascim, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(boxBola, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(varFederacao, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(185, 185, 185)
-                .addComponent(btsalvar)
-                .addGap(18, 18, 18)
-                .addComponent(btLimpar)
+                            .addComponent(varFederacao, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(185, 185, 185)
+                        .addComponent(btsalvar)
+                        .addGap(18, 18, 18)
+                        .addComponent(btLimpar)))
                 .addContainerGap(292, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
+                .addGap(6, 6, 6)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nome, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(varNome))
@@ -202,7 +225,11 @@ public class CadastroJogador extends javax.swing.JFrame {
             JogadorDaoImpl jogadoDao = new JogadorDaoImpl();
             Jogador jogador = new Jogador();
             jogador.setNome(varNome.getText().trim());
-            jogador.setNascimento(new Date());
+            try {
+                jogador.setNascimento(converteStringEmData(varNascim.getText()));
+            } catch (ParseException ex) {
+                System.out.println("Erro ao converter data " + ex.getMessage());
+            }
             jogador.setBola((String) boxBola.getSelectedItem());
             jogador.setTelefone(varTelefone.getText().trim());
             jogador.setEmail(varEmail.getText().trim());
@@ -213,6 +240,14 @@ public class CadastroJogador extends javax.swing.JFrame {
             limpar();
         }
     }//GEN-LAST:event_btsalvarActionPerformed
+
+    private Date converteStringEmData(String valor) throws ParseException {
+        SimpleDateFormat formatado = new SimpleDateFormat("dd/MM/yyyy");
+
+        Date data = formatado.parse(valor);
+        return data;
+    }
+
 
     private void boxBolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxBolaActionPerformed
         if (boxBola.getSelectedIndex() == 0) {
@@ -333,6 +368,7 @@ public class CadastroJogador extends javax.swing.JFrame {
     private javax.swing.JLabel email;
     private javax.swing.JLabel federacao;
     private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel nascimento;
     private javax.swing.JLabel nome;

@@ -38,7 +38,7 @@ public class JogadorDaoImplTest {
     @Test
     public void testSalvar() {
         System.out.println("salvar");
-        jogador = new Jogador(GeradorUtil.gerarNome(), new Date(), "Bola de 7kg", GeradorUtil.gerarTelefoneFixo(),
+        jogador = new Jogador(GeradorUtil.gerarNome(), new Date(), "Bola de 7.5kg", GeradorUtil.gerarTelefoneFixo(),
                 "fulano@gmail.com", GeradorUtil.gerarFederacao());
         jogDao.salvar(jogador);
     }

@@ -81,7 +81,7 @@ public class LoginCampeonato extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(27, 187, 125));
+        jPanel1.setBackground(new java.awt.Color(255, 51, 0));
 
         lbTexto.setBackground(new java.awt.Color(255, 255, 255));
         lbTexto.setFont(new java.awt.Font("Book Antiqua", 1, 36)); // NOI18N
